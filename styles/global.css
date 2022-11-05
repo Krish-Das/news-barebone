@@ -14,6 +14,7 @@
   --black: black;
   --border-radius: 5px;
   --stroke-size: 2px;
+  --body-size: 1.2em;
 }
 
 * {
@@ -38,24 +39,33 @@ body {
 html h1,
 body h1 {
   font-size: 5em;
+  font-size: calc(var(--body-size) * 3);
   font-weight: 900;
   text-transform: uppercase;
 }
 html h2,
 body h2 {
-  font-size: 3em;
+  font-size: calc(var(--body-size) * 2);
   font-weight: 500;
+  text-transform: uppercase;
 }
 html h3,
 body h3 {
-  font-size: 2em;
+  font-size: calc(var(--body-size) * 1.5);
   font-weight: 300;
   text-transform: uppercase;
 }
 html p,
 body p {
-  font-size: 1.2em;
+  font-size: var(--body-size);
   max-width: 60ch;
+}
+html .display_heading,
+body .display_heading {
+  font-size: calc(var(--body-size) * 4.3);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
 }
 html a,
 body a {
@@ -122,15 +132,15 @@ body {
     font-size: 18px;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   html,
 body {
     font-size: 12px;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   html,
 body {
-    font-size: 10px;
+    font-size: 11px;
   }
 }/*# sourceMappingURL=global.css.map */
