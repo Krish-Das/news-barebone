@@ -143,4 +143,12 @@ body {
 body {
     font-size: 11px;
   }
+}
+::-moz-selection {
+  color: var(--dark);
+  background-color: var(--primary-color);
+}
+::selection {
+  color: var(--dark);
+  background-color: var(--primary-color);
 }/*# sourceMappingURL=global.css.map */
