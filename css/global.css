@@ -99,7 +99,6 @@ body button {
   background-color: var(--primary-color);
   border: none;
   outline: none;
-  border-radius: var(--border-radius);
   cursor: pointer;
 }
 html button:hover,
@@ -151,4 +150,4 @@ body {
 ::selection {
   color: var(--dark);
   background-color: var(--primary-color);
-}/*# sourceMappingURL=global.css.map */
+}

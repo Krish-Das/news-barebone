@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Switzer-Variable";
+  src: url("../src/fonts/Switzer-Variable/Switzer-Variable.woff2")
+      format("woff2"),
+    url("../src/fonts/Switzer-Variable/Switzer-Variable.woff") format("woff"),
+    url("../src/fonts/Switzer-Variable/Switzer-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: rgb(169, 255, 10);
+  --primary-light: rgb(196, 255, 86);
+  --light: white;
+  --dark: black;
+  --white: white;
+  --black: black;
+
+  --border-radius: 5px;
+  --stroke-size: 2px;
+
+  --body-size: 1.2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  list-style-type: none;
+
+  color: var(--dark);
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+
+  font-family: Switzer-Variable, sans-serif;
+  font-size: 1vw;
+
+  color: inherit;
+  background-color: var(--primary-color);
+
+  h1 {
+    font-size: 5em;
+    font-size: calc(var(--body-size) * 3);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: calc(var(--body-size) * 2);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: calc(var(--body-size) * 1.5);
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: var(--body-size);
+    max-width: 60ch;
+  }
+
+  .display_heading {
+    font-size: calc(var(--body-size) * 4.3);
+    font-weight: 900;
+    text-transform: uppercase;
+
+    line-height: 1;
+  }
+
+  a {
+    padding: 0 0 0.25em 0;
+
+    color: var(--dark);
+    border-bottom: var(--stroke-size) solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-size: inherit;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  button:focus,
+  a:focus {
+    outline: none;
+    color: var(--dark);
+    background: none;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+  }
+
+  button {
+    height: 25px;
+    padding: 0.1em 0.5em;
+
+    font-family: inherit;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    color: var(--dark);
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+  }
+
+  button:hover,
+  button:active {
+    background-color: var(--primary-light);
+  }
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+
+    padding: 0.5em 2em;
+
+    background-color: var(--light);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html,
+  body {
+    font-size: 11px;
+  }
+}
+
+::selection {
+  color: var(--dark);
+  background-color: var(--primary-color);
+}

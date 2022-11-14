@@ -1,3 +1,4 @@
-*.scss
 ignore.*
-*.map
+map
+.vscode
+.idea
