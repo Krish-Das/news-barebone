@@ -21,6 +21,7 @@
   --stroke-size: 2px;
 
   --body-size: 1.2em;
+  --mainPadding: 1.56em;
 }
 
 * {
@@ -37,7 +38,6 @@
 html,
 body {
   width: 100vw;
-  height: 100vh;
 
   font-family: Switzer-Variable, sans-serif;
   font-size: 1vw;
@@ -119,23 +119,24 @@ body {
 
 main {
   width: 100%;
+  margin: auto;
+
+  section {
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+  }
 }
 
-section {
+.container {
   width: 100%;
+  max-width: 1920px;
 
-  display: flex;
-  justify-content: center;
+  padding: var(--mainPadding);
 
-  .container {
-    width: 100%;
-    max-width: 1920px;
-    height: 100vh;
-
-    padding: 0.5em 2em;
-
-    background-color: var(--light);
-  }
+  background-color: var(--light);
 }
 
 @media only screen and (min-width: 1920px) {
