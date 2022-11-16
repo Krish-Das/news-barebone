@@ -128,7 +128,6 @@ main {
   width: 100%;
   margin-top: var(--nav-height);
   position: relative;
-  top: 0;
 }
 main section {
   width: 100%;
@@ -142,6 +141,7 @@ main section {
   max-width: 1920px;
   height: 100vh;
   height: var(--fullHeight);
+  position: relative;
   padding: var(--mainPadding);
   background-color: var(--light);
 }
