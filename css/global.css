@@ -6,8 +6,9 @@
   font-style: normal;
 }
 :root {
-  --primary-color: rgb(169, 255, 10);
-  --primary-light: rgb(196, 255, 86);
+  --green: rgb(169, 255, 10);
+  --lightGreen: rgb(196, 255, 86);
+  --yellow: #f7e744;
   --light: white;
   --dark: black;
   --white: white;
@@ -26,6 +27,7 @@
   list-style: none;
   list-style-type: none;
   color: var(--dark);
+  font-weight: normal;
 }
 
 html,
@@ -33,26 +35,46 @@ body {
   font-family: Switzer-Variable, sans-serif;
   font-size: 1vw;
   color: inherit;
-  background-color: var(--primary-color);
+  background-color: var(--green);
+}
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-weight: bold;
 }
 html h1,
 body h1 {
-  font-size: 5em;
   font-size: calc(var(--body-size) * 3);
-  font-weight: 900;
-  text-transform: uppercase;
 }
 html h2,
 body h2 {
   font-size: calc(var(--body-size) * 2);
   font-weight: 500;
-  text-transform: uppercase;
 }
 html h3,
 body h3 {
   font-size: calc(var(--body-size) * 1.5);
-  font-weight: 300;
-  text-transform: uppercase;
+}
+html h4,
+body h4 {
+  font-size: calc(var(--body-size) * 1.3);
+}
+html h5,
+body h5 {
+  font-size: calc(var(--body-size) * 1.2);
+}
+html h6,
+body h6 {
+  font-size: calc(var(--body-size) * 1.1);
 }
 html p,
 body p {
@@ -70,10 +92,7 @@ html a,
 body a {
   padding: 0 0 0.25em 0;
   color: var(--dark);
-  border-bottom: var(--stroke-size) solid var(--primary-color);
-  border-radius: var(--border-radius);
   font-size: inherit;
-  font-weight: 500;
   text-transform: uppercase;
 }
 html button:focus,
@@ -83,8 +102,6 @@ body a:focus {
   outline: none;
   color: var(--dark);
   background: none;
-  border: 2px solid var(--primary-color);
-  border-radius: var(--border-radius);
 }
 html button,
 body button {
@@ -92,10 +109,9 @@ body button {
   padding: 0.1em 0.5em;
   font-family: inherit;
   font-size: 0.9em;
-  font-weight: 500;
   text-transform: uppercase;
   color: var(--dark);
-  background-color: var(--primary-color);
+  background-color: var(--green);
   border: none;
   outline: none;
   cursor: pointer;
@@ -104,7 +120,7 @@ html button:hover,
 html button:active,
 body button:hover,
 body button:active {
-  background-color: var(--primary-light);
+  background-color: var(--lightGreen);
 }
 
 main {
@@ -137,17 +153,35 @@ body {
     font-size: 12px;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
   html,
 body {
     font-size: 11px;
   }
 }
+@media only screen and (max-width: 568px) {
+  html,
+body {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  html,
+body {
+    font-size: 7px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  html,
+body {
+    font-size: 6px;
+  }
+}
 ::-moz-selection {
   color: var(--dark);
-  background-color: var(--primary-color);
+  background-color: var(--green);
 }
 ::selection {
   color: var(--dark);
-  background-color: var(--primary-color);
+  background-color: var(--green);
 }

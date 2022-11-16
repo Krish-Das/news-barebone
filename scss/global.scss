@@ -10,8 +10,9 @@
 }
 
 :root {
-  --primary-color: rgb(169, 255, 10);
-  --primary-light: rgb(196, 255, 86);
+  --green: rgb(169, 255, 10);
+  --lightGreen: rgb(196, 255, 86);
+  --yellow: #f7e744;
   --light: white;
   --dark: black;
   --white: white;
@@ -33,6 +34,7 @@
   list-style-type: none;
 
   color: var(--dark);
+  font-weight: normal;
 }
 
 html,
@@ -41,23 +43,36 @@ body {
   font-size: 1vw;
 
   color: inherit;
-  background-color: var(--primary-color);
+  background-color: var(--green);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    // text-transform: uppercase;
+  }
 
   h1 {
-    font-size: 5em;
     font-size: calc(var(--body-size) * 3);
-    font-weight: 900;
-    text-transform: uppercase;
   }
   h2 {
     font-size: calc(var(--body-size) * 2);
     font-weight: 500;
-    text-transform: uppercase;
   }
   h3 {
     font-size: calc(var(--body-size) * 1.5);
-    font-weight: 300;
-    text-transform: uppercase;
+  }
+  h4 {
+    font-size: calc(var(--body-size) * 1.3);
+  }
+  h5 {
+    font-size: calc(var(--body-size) * 1.2);
+  }
+  h6 {
+    font-size: calc(var(--body-size) * 1.1);
   }
   p {
     font-size: var(--body-size);
@@ -76,10 +91,7 @@ body {
     padding: 0 0 0.25em 0;
 
     color: var(--dark);
-    border-bottom: var(--stroke-size) solid var(--primary-color);
-    border-radius: var(--border-radius);
     font-size: inherit;
-    font-weight: 500;
     text-transform: uppercase;
   }
 
@@ -88,8 +100,6 @@ body {
     outline: none;
     color: var(--dark);
     background: none;
-    border: 2px solid var(--primary-color);
-    border-radius: var(--border-radius);
   }
 
   button {
@@ -98,11 +108,10 @@ body {
 
     font-family: inherit;
     font-size: 0.9em;
-    font-weight: 500;
     text-transform: uppercase;
 
     color: var(--dark);
-    background-color: var(--primary-color);
+    background-color: var(--green);
     border: none;
     outline: none;
 
@@ -111,7 +120,7 @@ body {
 
   button:hover,
   button:active {
-    background-color: var(--primary-light);
+    background-color: var(--lightGreen);
   }
 }
 
@@ -131,6 +140,7 @@ main {
 .container {
   width: 100%;
   max-width: 1920px;
+  // max-width: 100em;
 
   padding: var(--mainPadding);
 
@@ -151,14 +161,34 @@ main {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
   html,
   body {
     font-size: 11px;
   }
 }
 
+@media only screen and (max-width: 568px) {
+  html,
+  body {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  html,
+  body {
+    font-size: 7px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  html,
+  body {
+    font-size: 6px;
+  }
+}
+
 ::selection {
   color: var(--dark);
-  background-color: var(--primary-color);
+  background-color: var(--green);
 }
