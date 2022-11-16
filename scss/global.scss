@@ -10,9 +10,9 @@
 }
 
 :root {
-  --green: rgb(169, 255, 10);
-  --lightGreen: rgb(196, 255, 86);
+  --yellow: rgb(196, 255, 86);
   --yellow: #f7e744;
+  --threadBlue: #0721c8;
   --light: white;
   --dark: black;
   --white: white;
@@ -43,7 +43,7 @@ body {
   font-size: 1vw;
 
   color: inherit;
-  background-color: var(--green);
+  background-color: var(--threadBlue);
 
   h1,
   h2,
@@ -97,9 +97,9 @@ body {
 
   button:focus,
   a:focus {
-    outline: none;
+    // outline: none;
     color: var(--dark);
-    background: none;
+    // background: none;
   }
 
   button {
@@ -110,8 +110,8 @@ body {
     font-size: 0.9em;
     text-transform: uppercase;
 
-    color: var(--dark);
-    background-color: var(--green);
+    color: var(--white);
+    background-color: var(--threadBlue);
     border: none;
     outline: none;
 
@@ -120,7 +120,8 @@ body {
 
   button:hover,
   button:active {
-    background-color: var(--lightGreen);
+    color: var(--black);
+    background-color: var(--yellow);
   }
 }
 
@@ -189,6 +190,6 @@ main {
 }
 
 ::selection {
-  color: var(--dark);
-  background-color: var(--green);
+  color: var(--black);
+  background-color: var(--yellow);
 }

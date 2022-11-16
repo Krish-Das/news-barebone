@@ -6,9 +6,9 @@
   font-style: normal;
 }
 :root {
-  --green: rgb(169, 255, 10);
-  --lightGreen: rgb(196, 255, 86);
+  --yellow: rgb(196, 255, 86);
   --yellow: #f7e744;
+  --threadBlue: #0721c8;
   --light: white;
   --dark: black;
   --white: white;
@@ -35,7 +35,7 @@ body {
   font-family: Switzer-Variable, sans-serif;
   font-size: 1vw;
   color: inherit;
-  background-color: var(--green);
+  background-color: var(--threadBlue);
 }
 html h1,
 html h2,
@@ -99,9 +99,7 @@ html button:focus,
 html a:focus,
 body button:focus,
 body a:focus {
-  outline: none;
   color: var(--dark);
-  background: none;
 }
 html button,
 body button {
@@ -110,8 +108,8 @@ body button {
   font-family: inherit;
   font-size: 0.9em;
   text-transform: uppercase;
-  color: var(--dark);
-  background-color: var(--green);
+  color: var(--white);
+  background-color: var(--threadBlue);
   border: none;
   outline: none;
   cursor: pointer;
@@ -120,7 +118,8 @@ html button:hover,
 html button:active,
 body button:hover,
 body button:active {
-  background-color: var(--lightGreen);
+  color: var(--black);
+  background-color: var(--yellow);
 }
 
 main {
@@ -178,10 +177,10 @@ body {
   }
 }
 ::-moz-selection {
-  color: var(--dark);
-  background-color: var(--green);
+  color: var(--black);
+  background-color: var(--yellow);
 }
 ::selection {
-  color: var(--dark);
-  background-color: var(--green);
+  color: var(--black);
+  background-color: var(--yellow);
 }
