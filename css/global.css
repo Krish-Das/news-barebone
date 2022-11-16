@@ -16,6 +16,7 @@
   --border-radius: 5px;
   --stroke-size: 2px;
   --body-size: 1.2em;
+  --nav-height: 50px;
   --mainPadding: 1.56em;
 }
 
@@ -124,7 +125,7 @@ body button:active {
 
 main {
   width: 100%;
-  margin: auto;
+  margin: var(--nav-height) auto;
 }
 main section {
   width: 100%;
@@ -138,6 +139,21 @@ main section {
   max-width: 1920px;
   padding: var(--mainPadding);
   background-color: var(--light);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav .container {
+  height: var(--nav-height);
+  padding: 0 var(--mainPadding);
+  display: flex;
+  align-items: center;
 }
 
 @media only screen and (min-width: 1920px) {
