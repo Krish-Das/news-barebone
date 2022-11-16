@@ -17,6 +17,7 @@
   --stroke-size: 2px;
   --body-size: 1.2em;
   --nav-height: 50px;
+  --fullHeight: calc(100vh - var(--nav-height));
   --mainPadding: 1.56em;
 }
 
@@ -125,7 +126,9 @@ body button:active {
 
 main {
   width: 100%;
-  margin: var(--nav-height) auto;
+  margin-top: var(--nav-height);
+  position: relative;
+  top: 0;
 }
 main section {
   width: 100%;
@@ -137,6 +140,8 @@ main section {
 .container {
   width: 100%;
   max-width: 1920px;
+  height: 100vh;
+  height: var(--fullHeight);
   padding: var(--mainPadding);
   background-color: var(--light);
 }
