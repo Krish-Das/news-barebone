@@ -14,6 +14,10 @@
     .grid_item_left {
       grid-column-start: 1;
       grid-column-end: 3;
+
+      position: sticky;
+      top: calc(var(--mainPadding) * 2); //TODO: Fix this
+      height: 86vh;
     }
     .grid_item_center {
       grid-column-start: 3;
@@ -24,9 +28,30 @@
       grid-column-end: 11;
       display: flex;
       flex-direction: column;
+      position: sticky;
+      top: calc(var(--mainPadding) * 2); //TODO: Fix this
+      height: 86vh;
     }
   }
 }
+
+.catagory_selection {
+  h2 {
+    margin-left: calc(var(--mainPadding) / 1.2);
+  }
+  ul {
+    background-color: var(--white);
+    // background-color: red;
+    padding: calc(var(--mainPadding) / 1.2);
+
+    li {
+      margin-bottom: 0.5em;
+      font-size: calc(var(--mainFontSize) * 0.9);
+      opacity: 50%;
+    }
+  }
+}
+
 .headline {
   h1 {
     margin-bottom: var(--mainPadding);
@@ -96,6 +121,34 @@
   }
 }
 
+.news_feeds {
+  margin: var(--mainPadding) 0;
+}
+
+.videos {
+  margin-top: calc(var(--mainPadding) * 1.2);
+
+  .video_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: var(--secondPadding);
+
+    .video {
+      width: 100%;
+      height: 8.33em;
+      background-color: var(--imgBG);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 20%;
+      }
+    }
+  }
+}
+
 .category_heading {
   display: flex;
   justify-content: space-between;
@@ -120,6 +173,11 @@
     opacity: 50%;
   }
 }
+.center_heading {
+  h2 {
+    font-weight: bold;
+  }
+}
 
 .political {
   width: 100%;
@@ -128,7 +186,7 @@
 
   .news {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     margin-bottom: var(--secondPadding);
     .img {
@@ -136,6 +194,7 @@
       aspect-ratio: 1;
       background-color: var(--dark);
       border-radius: var(--border-radius);
+      margin-right: var(--secondPadding);
     }
     h3 {
       font-size: var(--mainFontSize);

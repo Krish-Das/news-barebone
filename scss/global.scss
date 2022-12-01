@@ -156,8 +156,8 @@ main {
   max-width: 1920px;
   // max-width: 100em;
 
-  height: 100vh;
-  height: var(--fullHeight);
+  // height: 100vh;
+  // height: var(--fullHeight);
 
   position: relative;
 
@@ -173,6 +173,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5000;
 
   .container {
     height: var(--nav-height);
@@ -182,7 +183,8 @@ nav {
     align-items: center;
   }
 }
-.img {
+.img,
+.video {
   border-radius: var(--border-radius);
 }
 
