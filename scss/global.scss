@@ -13,18 +13,25 @@
   --yellow: rgb(196, 255, 86);
   --yellow: #f7e744;
   --threadBlue: #0721c8;
-  --light: white;
+  --light: #f8f8fa;
   --dark: black;
   --white: white;
   --black: black;
+  --red: #ff2424;
+  --imgBG: #cecece;
 
-  --border-radius: 5px;
+  --rounded-radius: 50px;
+  --border-radius: 13px;
   --stroke-size: 2px;
 
   --body-size: 1.2em;
   --nav-height: 50px;
   --fullHeight: calc(100vh - var(--nav-height));
-  --mainPadding: 1.56em;
+
+  --mainPadding: 2.6em;
+  --secondPadding: 1.82em;
+
+  --mainFontSize: 1.25em;
 }
 
 * {
@@ -59,10 +66,12 @@ body {
 
   h1 {
     font-size: calc(var(--body-size) * 3);
+    font-size: var(--mainFontSize);
   }
   h2 {
     font-size: calc(var(--body-size) * 2);
-    font-weight: 500;
+    font-size: calc(var(--mainFontSize) * 1.2);
+    font-weight: 600;
   }
   h3 {
     font-size: calc(var(--body-size) * 1.5);
@@ -153,7 +162,7 @@ main {
   position: relative;
 
   padding: var(--mainPadding);
-  background-color: var(--light);
+  background-color: white;
 }
 
 nav {
@@ -172,6 +181,9 @@ nav {
     display: flex;
     align-items: center;
   }
+}
+.img {
+  border-radius: var(--border-radius);
 }
 
 @media only screen and (min-width: 1920px) {

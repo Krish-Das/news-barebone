@@ -9,16 +9,21 @@
   --yellow: rgb(196, 255, 86);
   --yellow: #f7e744;
   --threadBlue: #0721c8;
-  --light: white;
+  --light: #f8f8fa;
   --dark: black;
   --white: white;
   --black: black;
-  --border-radius: 5px;
+  --red: #ff2424;
+  --imgBG: #cecece;
+  --rounded-radius: 50px;
+  --border-radius: 13px;
   --stroke-size: 2px;
   --body-size: 1.2em;
   --nav-height: 50px;
   --fullHeight: calc(100vh - var(--nav-height));
-  --mainPadding: 1.56em;
+  --mainPadding: 2.6em;
+  --secondPadding: 1.82em;
+  --mainFontSize: 1.25em;
 }
 
 * {
@@ -56,11 +61,13 @@ body h6 {
 html h1,
 body h1 {
   font-size: calc(var(--body-size) * 3);
+  font-size: var(--mainFontSize);
 }
 html h2,
 body h2 {
   font-size: calc(var(--body-size) * 2);
-  font-weight: 500;
+  font-size: calc(var(--mainFontSize) * 1.2);
+  font-weight: 600;
 }
 html h3,
 body h3 {
@@ -143,7 +150,7 @@ main section {
   height: var(--fullHeight);
   position: relative;
   padding: var(--mainPadding);
-  background-color: var(--light);
+  background-color: white;
 }
 
 nav {
@@ -159,6 +166,10 @@ nav .container {
   padding: 0 var(--mainPadding);
   display: flex;
   align-items: center;
+}
+
+.img {
+  border-radius: var(--border-radius);
 }
 
 @media only screen and (min-width: 1920px) {
