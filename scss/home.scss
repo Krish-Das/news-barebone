@@ -46,8 +46,12 @@
 
     li {
       margin-bottom: 0.5em;
-      font-size: calc(var(--mainFontSize) * 0.9);
       opacity: 50%;
+
+      a {
+        font-size: calc(var(--mainFontSize) * 0.9);
+        text-transform: none;
+      }
     }
   }
 }
@@ -77,6 +81,7 @@
 
     background-color: var(--white);
 
+    .button,
     button {
       width: 11.82em;
       height: 2.59em;
@@ -103,6 +108,8 @@
     position: relative;
     padding: 0 var(--secondPadding);
     // width: 100%;
+    z-index: 1;
+    margin-top: var(--secondPadding);
 
     span {
       color: var(--red);
@@ -116,6 +123,13 @@
 
       li {
         margin-left: var(--secondPadding);
+
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 0.3em;
+        }
       }
     }
   }
@@ -189,6 +203,7 @@
     // justify-content: space-between;
     align-items: center;
     margin-bottom: var(--secondPadding);
+    text-transform: none;
     .img {
       width: 4.17em;
       aspect-ratio: 1;
@@ -212,5 +227,78 @@
     width: 100%;
     height: 85px;
     background-color: var(--imgBG);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .home {
+    .container {
+      display: block;
+    }
+  }
+  .catagory_selection {
+    display: none;
+  }
+  .headline {
+    h1 {
+      font-size: 2em;
+      margin-bottom: var(--secondPadding);
+    }
+    .news_details {
+      display: block;
+
+      h2 {
+        margin-bottom: var(--secondPadding);
+        font-size: 2em;
+      }
+      .button {
+        width: 100%;
+        height: 3em;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .category_heading {
+    h2 {
+      font-size: 2em;
+    }
+  }
+
+  .political,
+  .sports {
+    .category_heading {
+      margin: var(--mainPadding) 0;
+      h2 {
+        font-size: 2em;
+      }
+      a {
+        font-size: 1.3em;
+      }
+    }
+
+    .news {
+      .img {
+        width: 5em;
+        margin-right: var(--mainPadding);
+      }
+      h3 {
+        font-size: 2em;
+      }
+    }
+  }
+  .videos {
+    .video_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .video {
+        height: 25em;
+      }
+      .video:nth-child(2) {
+        margin: var(--mainPadding) 0;
+      }
+    }
   }
 }

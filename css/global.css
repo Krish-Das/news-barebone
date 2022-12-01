@@ -16,7 +16,7 @@
   --red: #ff2424;
   --imgBG: #cecece;
   --rounded-radius: 50px;
-  --border-radius: 13px;
+  --border-radius: 10px;
   --stroke-size: 2px;
   --body-size: 1.2em;
   --nav-height: 50px;
@@ -104,16 +104,23 @@ body a {
   font-size: inherit;
   text-transform: uppercase;
 }
+html .button:focus,
 html button:focus,
 html a:focus,
+body .button:focus,
 body button:focus,
 body a:focus {
   color: var(--dark);
 }
+html .button,
 html button,
+body .button,
 body button {
   height: 25px;
   padding: 0.1em 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: inherit;
   font-size: 0.9em;
   text-transform: uppercase;
@@ -123,8 +130,12 @@ body button {
   outline: none;
   cursor: pointer;
 }
+html .button:hover,
+html .button:active,
 html button:hover,
 html button:active,
+body .button:hover,
+body .button:active,
 body button:hover,
 body button:active {
   color: var(--black);

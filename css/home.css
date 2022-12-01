@@ -36,8 +36,11 @@
 }
 .catagory_selection ul li {
   margin-bottom: 0.5em;
-  font-size: calc(var(--mainFontSize) * 0.9);
   opacity: 50%;
+}
+.catagory_selection ul li a {
+  font-size: calc(var(--mainFontSize) * 0.9);
+  text-transform: none;
 }
 
 .headline h1 {
@@ -62,6 +65,7 @@
   position: relative;
   background-color: var(--white);
 }
+.headline .news_details .button,
 .headline .news_details button {
   width: 11.82em;
   height: 2.59em;
@@ -84,6 +88,8 @@
   text-transform: uppercase;
   position: relative;
   padding: 0 var(--secondPadding);
+  z-index: 1;
+  margin-top: var(--secondPadding);
 }
 .headline .news_stats span {
   color: var(--red);
@@ -96,6 +102,11 @@
 }
 .headline .news_stats ul li {
   margin-left: var(--secondPadding);
+  display: flex;
+  align-items: center;
+}
+.headline .news_stats ul li img {
+  margin-right: 0.3em;
 }
 
 .news_feeds {
@@ -161,6 +172,7 @@
   display: flex;
   align-items: center;
   margin-bottom: var(--secondPadding);
+  text-transform: none;
 }
 .political .news .img {
   width: 4.17em;
@@ -182,4 +194,64 @@
   width: 100%;
   height: 85px;
   background-color: var(--imgBG);
+}
+
+@media only screen and (max-width: 1200px) {
+  .home .container {
+    display: block;
+  }
+  .catagory_selection {
+    display: none;
+  }
+  .headline h1 {
+    font-size: 2em;
+    margin-bottom: var(--secondPadding);
+  }
+  .headline .news_details {
+    display: block;
+  }
+  .headline .news_details h2 {
+    margin-bottom: var(--secondPadding);
+    font-size: 2em;
+  }
+  .headline .news_details .button {
+    width: 100%;
+    height: 3em;
+    font-size: 1.2em;
+  }
+  .category_heading h2 {
+    font-size: 2em;
+  }
+  .political .category_heading,
+.sports .category_heading {
+    margin: var(--mainPadding) 0;
+  }
+  .political .category_heading h2,
+.sports .category_heading h2 {
+    font-size: 2em;
+  }
+  .political .category_heading a,
+.sports .category_heading a {
+    font-size: 1.3em;
+  }
+  .political .news .img,
+.sports .news .img {
+    width: 5em;
+    margin-right: var(--mainPadding);
+  }
+  .political .news h3,
+.sports .news h3 {
+    font-size: 2em;
+  }
+  .videos .video_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .videos .video_container .video {
+    height: 25em;
+  }
+  .videos .video_container .video:nth-child(2) {
+    margin: var(--mainPadding) 0;
+  }
 }
